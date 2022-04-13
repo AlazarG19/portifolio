@@ -6,11 +6,9 @@ let observer = new IntersectionObserver((items) => {
     items.forEach((item) => {
         if (item.intersectionRatio > 0) {
             item.target.style.animation = `animate 2s ${item.target.dataset.delay} forwards`
+        } else {
+            item.target.style.animation = `none`
         }
-
-        // else{
-        //     item.target.style.animation = `none`
-        // }
     })
 })
 animated.forEach((item) => {
