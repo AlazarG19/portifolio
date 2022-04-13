@@ -1,4 +1,4 @@
-let images = document.querySelectorAll("img")
+let images = document.querySelectorAll(".workimg")
 let hoverMe = document.querySelector(".hoverme")
 let downButton = document.querySelectorAll(".fa-chevron-up")
 observer.observe(hoverMe)
@@ -10,19 +10,19 @@ observer.observe(hoverMe)
 // )
 downButton.forEach(
     (item)=>{
-        console.log(item)
         item.style.animation = `animateup 1.5s  infinite`
     }
 )
 images.forEach((image)=>{
+    image.addEventListener("click",()=>{
+        window.open(image.dataset.link,'_self')
+    })
     image.addEventListener("mouseover",()=>{
         images.forEach(element => {
             if(element.dataset.name !== image.dataset.name){
                 element.style.animation = "animation .7s linear forwards"
             }else{
-                console.log(element.style.animation)
                 let des = document.querySelector(`.${image.dataset.name}d${image.dataset.n}`)
-                console.log(des)
                 element.style.animation = "scale .7s forwards"
                 des.style.animation = "animation4 .7s .3s forwards"
             }

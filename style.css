@@ -376,9 +376,31 @@ font-weight: 900; */
     transform: rotateY(0deg);
   }
 }
-/* languages end */
 @media (max-width: 465px) {
+
+  .choices > div {
+    font-size: 20px;
+    min-width: 140px;
+    padding-top: 20px;
+  }
+  @keyframes underlining {
+    100% {
+      width: 90px;
+    }
+  }
+  @keyframes underlining2 {
+    100% {
+      width: 115px;
+    }
+  }
+  @keyframes removeunderlining {
+    100% {
+      width: 100px;
+    }
+  }
 }
+/* languages end */
+
 @keyframes spin_words {
   10% {
     transform: translateY(-110%);
@@ -449,6 +471,8 @@ font-weight: 900; */
     font-size: 5vw;
     height: 14vw;
   }
+
+  
   
 }
 @media (max-width: 700px) {
@@ -670,12 +694,29 @@ font-weight: 900; */
 .social-icons{
   width: 40px;
 }
-
+@media (max-width : 550px) {
+  .footer{
+    flex-direction: column-reverse;
+  }
+  .enough{
+    font-size: 9vw;
+  }
+  .footer-details{
+    width: 100vw;
+  }
+  .what-question {
+    font-size: 6vw;
+    margin-bottom: 20px;
+}
+.contact{
+  font-size: 5vw;
+}
+}
 /* start of my works */
 
 .content34{
   margin-top: 10vw;
-  height: 60vw;
+  height: 62vw;
 }
 .my-works-img{
   position: relative;
@@ -693,7 +734,7 @@ font-weight: 900; */
 .img2{
   top: 15vw;
   left: 33vw;
-  z-index: ;
+  /* z-index: ; */
 
 }
 .img3{
@@ -701,7 +742,7 @@ font-weight: 900; */
   left: 54vw;
 }
 .description{
-  border-radius: 20px;
+  border-radius: 5px;
   padding-left: 12px;
   color: var(--primaryColor);
   background-color: var(--bgfaded);
@@ -709,11 +750,15 @@ font-weight: 900; */
   position: absolute;
   z-index: 1;
   max-width: 35vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 .imgd1{
   top: 35vw;
   left: 7.4vw; 
-  font-size: 2vw;
+  font-size: 1.8vw;
   opacity: 0;
 }
 .img2d2{
@@ -728,6 +773,7 @@ font-weight: 900; */
   font-size: 2vw;
   opacity: 0;
 }
+
 .hoverme{
   position: absolute;
   top: 38vw;
@@ -764,6 +810,16 @@ font-weight: 900; */
   top: 35vw;
   right: 20vw; 
   font-size: 2vw;
+}
+.workslink{
+  text-decoration: none;
+  background: var(--tertiaryColor);
+  width: 6vw;
+  border: 0;
+  height: 25px;
+  font-size: 1.7vw;
+  border-radius: 4px;
+  color: var(--primaryColor);
 }
 @keyframes animation {
   0%{
