@@ -24,27 +24,33 @@ images.forEach((image) => {
         window.open(image.dataset.link, '_self')
     })
     image.addEventListener("mouseover", () => {
-        images.forEach(element => {
-            if (element.dataset.name !== image.dataset.name) {
-                element.style.animation = "animation .7s linear forwards"
-            } else {
-                let des = document.querySelector(`.${image.dataset.name}d${image.dataset.n}`)
-                element.style.animation = "scale .7s forwards"
-                des.style.animation = "animation4 .7s .3s forwards"
-            }
+        let width = window.innerWidth
+        if (width > 700) {
+            images.forEach(element => {
+                if (element.dataset.name !== image.dataset.name) {
+                    element.style.animation = "animation .7s linear forwards"
+                } else {
+                    let des = document.querySelector(`.${image.dataset.name}d${image.dataset.n}`)
+                    element.style.animation = "scale .7s forwards"
+                    des.style.animation = "animation4 .7s .3s forwards"
+                }
 
-        });
+            });
+        }
     })
     image.addEventListener("mouseleave", () => {
-        images.forEach(element => {
-            if (element.dataset.name !== image.dataset.name) {
-                element.style.animation = "animation2 .7s forwards"
-            } else {
-                let des = document.querySelector(`.${image.dataset.name}d${image.dataset.n}`)
-                element.style.animation = "scale2 .7s forwards"
-                des.style.animation = "animation3 .1s forwards"
+        let width = window.innerWidth
+        if (width > 700) {
+            images.forEach(element => {
+                if (element.dataset.name !== image.dataset.name) {
+                    element.style.animation = "animation2 .7s forwards"
+                } else {
+                    let des = document.querySelector(`.${image.dataset.name}d${image.dataset.n}`)
+                    element.style.animation = "scale2 .7s forwards"
+                    des.style.animation = "animation3 .1s forwards"
 
-            }
-        });
+                }
+            });
+        }
     })
 })

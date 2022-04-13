@@ -41,10 +41,10 @@ body {
 }
 
 .light {
-    --primaryColor: white;
+    --primaryColor: #f6fcfc;
     --secondaryColor: #040405;
     --tertiaryColor: #64b5ff;
-    --anotherblack: white;
+    --anotherblack: #f6fcfc;
     --mainbg: #ebedf0;
     --bgfaded: #11111173;
     --invert: #111111;
@@ -788,8 +788,26 @@ font-weight: 900; */
     font-size: 3vw;
 }
 
+.phoneno {
+    font-size: 2vw;
+}
+
 .social-icons {
-    width: 40px;
+    font-size: 5vw;
+    color: var(--mainbg);
+    border-radius: 50%;
+    width: 5vw;
+    height: 5vw;
+}
+
+.social-icons i {
+    border-radius: 50%;
+}
+
+.social-icons i:hover {
+    background-color: var(--mainbg);
+    color: var(--invert);
+    transition: .4s linear;
 }
 
 @media (max-width: 550px) {
@@ -860,6 +878,10 @@ font-weight: 900; */
     flex-direction: column;
     align-items: center;
     text-align: center;
+}
+
+.btn-visit {
+    display: none;
 }
 
 .imgd1 {
@@ -1003,7 +1025,7 @@ font-weight: 900; */
     }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 700px) {
     .content34 {
         height: fit-content;
     }
@@ -1045,6 +1067,7 @@ font-weight: 900; */
         display: none;
     }
     .btn-visit {
+        display: block;
         margin-top: 20px;
         transform: scale(0.8);
     }
