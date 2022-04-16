@@ -297,13 +297,14 @@ nav {
     color: var(--invert);
     height: 100vh;
     padding-top: 70px;
+
   }
   .nav-part-mobile > div {
     display: none;
     padding-top: 15px;
     padding-bottom: 15px;
     font-size: 20px;
-    width: 250px;
+    width: 100vw;
     text-align: center;
   }
   nav{
@@ -729,7 +730,11 @@ nav {
     height: 6.5vh;
   }
 }
-
+@media (max-width : 400px){
+  .pcimg{
+    top: 7vw;
+  }
+}
 /* section css */
 
 .card {
