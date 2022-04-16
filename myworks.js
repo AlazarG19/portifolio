@@ -1,3 +1,4 @@
+// adding the hover effect on the images 
 let images = document.querySelectorAll(".workimg")
 let visits = document.querySelectorAll(".btn-visit")
 let hoverMe = document.querySelector(".hoverme")

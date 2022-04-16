@@ -1,7 +1,7 @@
 let animated = document.querySelectorAll(".animated")
 let body = document.querySelector("body")
 let card = document.querySelectorAll(".card")
-    // console.log(card)
+// making the components appear when the are entering the view 
 let observer = new IntersectionObserver((items) => {
     items.forEach((item) => {
         if (item.intersectionRatio > 0) {
@@ -48,6 +48,8 @@ desktopmockup.src = "./images/Computer1.png"
 tabletmockup.src = "./images/Tablet1.png"
 phonemockup.src = "./images/phone1.png"
     // end of redundant code 
+
+    // adding the round button on the page and adding the functionality 
 round.addEventListener('click', () => {
     if (localStorage.getItem('theme') === 'light') {
         laptopmockup.src = "./images/Laptop11.png"
@@ -99,5 +101,39 @@ round.addEventListener('click', () => {
 
     }
 })
+// see more button script 
 let button = document.querySelector(".btn-seemore")
 button.onclick = () => { console.log("hello") }
+
+// navbar script 
+let close1 = document.querySelector(".close")
+let hamburger = document.querySelector(".hamburger")
+let navbarPart = document.querySelectorAll(".nav-part > div")
+let navbarPartMobile = document.querySelectorAll(".nav-part-mobile > div")
+hamburger.onclick = () =>{
+    navbarPartMobile.forEach((nav)=>{
+        nav.style.display = "block"
+    })
+    hamburger.style.display = "none"
+    close1.style.display = "block"
+}
+close1.onclick = () =>{
+    navbarPartMobile.forEach((nav)=>{
+        nav.style.display = "none"
+    })
+    hamburger.style.display = "block"
+    close1.style.display = "none"
+}
+navbarPartMobile.forEach((nav)=>{
+    nav.onclick = ()=>{
+        navbarPartMobile.forEach((nav)=>{
+            nav.style.display = "none"
+        })
+        hamburger.style.display = "block"
+        close1.style.display = "none"
+        document.getElementById(`${nav.dataset.link}`).scrollIntoView({behavior: 'smooth'});    }
+})
+navbarPart.forEach((nav)=>{
+    nav.onclick = ()=>{
+        document.getElementById(`${nav.dataset.link}`).scrollIntoView({behavior: 'smooth'});    }
+})

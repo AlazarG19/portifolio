@@ -24,7 +24,7 @@ childs.forEach((elements)=>{
   elements.style.animation = "spinning 1.5s forwards"
 })
 
-
+// adding the underline effect and changing languages 
 current.style.display = "block"
 choices.forEach((choice)=>{
   choice.onclick = ()=>{
