@@ -315,9 +315,15 @@ nav {
   }
   .hamburger {
     display: block;
-    margin-right: 110px;
+    margin-right: 15px;
     margin-top: 3px;
   }
+  /* adding the backgorund them container to be lower  */
+  .bg-theme-container{
+    right: 7px;
+    top: 40px;
+  }
+  /*  */
   .close {
     display: none;
     position: fixed;
