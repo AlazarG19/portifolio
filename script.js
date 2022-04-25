@@ -171,4 +171,5 @@ function DownloadFile(fileName) {
     req.send();
 };
 var link = document.querySelector('.btn-download');
-link.onclick = ()=>{DownloadFile('./internshipcs.docx')};
+link.onclick = ()=>{var docLocation = '/Internshipcs.docx';
+window.open(docLocation,"resizeable,scrollbar"); };
