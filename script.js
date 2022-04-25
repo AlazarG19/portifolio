@@ -171,5 +171,6 @@ function DownloadFile(fileName) {
     req.send();
 };
 var link = document.querySelector('.btn-download');
-link.onclick = ()=>{var docLocation = '/Internshipcs.docx';
+link.onclick = ()=>{
+    var docLocation = 'https://docs.google.com/document/d/1Yn1wv7CCJV75c6t21cyy1LZrUwEpc9I7cAFPVmL5an0/edit?usp=sharing';
 window.open(docLocation,"resizeable,scrollbar"); };
